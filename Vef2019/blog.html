@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog
+---
+<nav>
+    <nav>
+        <a href="index.html">Forsiðan</a>
+        <a href="_site/about.html">um mig</a>
+        <a href="blog.html">Blog</a>
+        <a href="staff.html">Starfsfólk</a>
+    </nav>
+    <hr>
+</nav>
+<h1>Latest Posts</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
